@@ -17,12 +17,17 @@ Before writing the naive version, I tried to identify the kernels in my program.
 
 ### Approach 1
 
-I tried to inline the function call in naive but unfortunately, didn't see any significant results. I guess the compiler already optimizes the function call to `func` in the naive version and replaces it with an inline one. My <i>Best run time overall: 0.007855s</i> and is described in approach1.cpp
+I tried to inline the function call in naive but unfortunately, didn't see any significant results. I guess the compiler already optimizes the function call to `func` in the naive version and replaces it with an inline one. My <i>Best run time overall: 0.007855s</i> and is described in `approach1.cpp`
 
 ### Approach 2
 
 (Loop Unrolling)
-I decided to go with a loop unrolling value of 12 and changed `i++` to `++i` so that it doesn't create a copy source:[Pre increment vs post increment](https://stackoverflow.com/questions/30941980/why-post-increment-needs-to-make-a-copy-while-pre-increment-does-not) which brought down the 'Best run time overall: 0.007452s'. This version is described in approach2.cpp
+I decided to go with a loop unrolling value of 12 and changed `i++` to `++i` so that it doesn't create a copy source:[Pre increment vs post increment](https://stackoverflow.com/questions/30941980/why-post-increment-needs-to-make-a-copy-while-pre-increment-does-not) which brought down the 'Best run time overall: 0.007452s'. This version is described in `approach2.cpp`
 
 ### Approach 3
+
+As compared to Approaches 1 and 2, Approach 3 doesn't check for an end of string character and instead checks if the given value is in the range (0 - 9). It does this by checking if the unsigned (meaning is greater than 0) is less than 9 `return unsigned(s - '0');` It goes inside the while loop only if the first value is valid(i.e. a digit) so it has fewer number of iterations. Also, the data type of the value being computed inside the while loop was changed to `uint_fast32_t`. All of these changes gave me a significant improvement from Approach 2 and brought down the `Best run time overall: 0.005603s`. This gives me a performance boost of 30% over the naive version in Part 1. These changes have been described in `approach3.cpp`. Performing loop unrolling on Approach 3 didn't yield any significant changes.
+
+### Approach 4
+
 
