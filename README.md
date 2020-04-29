@@ -22,4 +22,7 @@ I tried to inline the function call in naive but unfortunately, didn't see any s
 ### Approach 2
 
 (Loop Unrolling)
-I decided to go with a loop unrolling value of 12 and changed `i++` to `++i` so that it doesn't create a copy Source:[Pre increment vs post increment](https://stackoverflow.com/questions/30941980/why-post-increment-needs-to-make-a-copy-while-pre-increment-does-not). which brought down the 'Best run time overall: 0.007452s'. 
+I decided to go with a loop unrolling value of 12 and changed `i++` to `++i` so that it doesn't create a copy source:[Pre increment vs post increment](https://stackoverflow.com/questions/30941980/why-post-increment-needs-to-make-a-copy-while-pre-increment-does-not) which brought down the 'Best run time overall: 0.007452s'. This version is described in approach2.cpp
+
+### Approach 3
+
