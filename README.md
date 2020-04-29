@@ -16,3 +16,5 @@ Before writing the naive version, I tried to identify the kernels in my program.
 ## Part 2
 
 ### Approach 1
+
+I tried to inline the function call to naive but unfortunately, didn't see any significant results. I guess the compiler already optimizes the function call to `func` in the naive version and replaces it with an inline one. My <i>Best run time overall: 0.007655s</i> and is described in approach1.cpp
