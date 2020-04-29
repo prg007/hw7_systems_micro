@@ -8,3 +8,4 @@ Before writing the naive version, I tried to identify the kernels in my program.
 ![Screenshot of running Instruments(profiler) on original converter.c file](https://github.com/prg007/hw7_systems_micro/blob/master/Screen%20Shot%202020-04-29%20at%204.17.16%20AM.png)
 
 ### Naive Version
+- My naive version replaces the atoi with a custom function. My naive version gives <i> Best run time overall: 0.007619s </i>. I could have optimized my naive version further but I decided to trade it for readability instead and hold off further optimizations to the naive version until Part 2. My naive version is in the file `naive_converter.cpp`.  
